@@ -1,0 +1,2 @@
+mysql://admin@testdb.cu8n90lis0pt.us-east-1.rds.amazonaws.com
+pwd: mascon123
