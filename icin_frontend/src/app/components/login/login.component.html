@@ -22,8 +22,8 @@
                   <small *ngIf="hasError(password)" [class]="hasError(password) ? 'error' : ''">
                     <div *ngIf="password.errors">
                             <span *ngIf="password.errors.required">Password is a required field !</span>
-                            <span *ngIf="password.errors.minlength">Entered password is not valid password min 6 char!</span>
-                            <span *ngIf="password.errors.maxlength">Entered password is not valid password min 12 char!</span>
+                            <span *ngIf="password.errors.minlength">Password length is incorrect.</span>
+                            <span *ngIf="password.errors.maxlength">Password length is incorrect.</span>
                     </div>
                   </small>
                 </div>

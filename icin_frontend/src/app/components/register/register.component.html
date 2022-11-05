@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col"></div>
         <div class="col-6">
-            <h4>SignUp Form : </h4>
+            <h4>New Registration Form : </h4>
             <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)">
                 <div class="form-row">
                     <!-- First Name -->
@@ -94,48 +94,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <label for="inputState">State</label>
-                        <select id="inputState" name="state" class="form-control"  formControlName="state">
-                            <option value="NY">New York</option>
-                            <option value="TX">Texas</option>
-                            <option value="CA">California</option>
-                            <option value="HW">Hawaii</option>
-                        </select>
-                        <small *ngIf="hasError('state')" [class]="hasError('state') ? 'error' :''">
-                            <div *ngIf="f.state.errors">
-                                <span *ngIf="f.state.errors.required">State is a required field</span>
-                            </div>
-                        </small>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <label for="inputZip">Zip</label>
-                        <input type="number" class="form-control" id="zipcode" name="zipcode" formControlName="zipcode">
-                        <small *ngIf="hasError('zipcode')" [class]="hasError('zipcode') ? 'error' :''">
-                            <div *ngIf="f.zipcode.errors">
-                                <span *ngIf="f.zipcode.errors.required">zipcode is a required field</span>
-                            </div>
-                        </small>
-                    </div>
-                </div> -->
-
-                <!-- <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="agree" formControlName="agree" id="agree">
-                            <label class="form-check-label" for="aggree">
-                                Please check the terms and conditions!
-                            </label>
-                            <small *ngIf="hasError('agree')" [class]="hasError('agree') ? 'error' :''">
-                                <div *ngIf="f.agree.errors">
-                                    <span *ngIf="f.agree.errors.required">agree is a required field</span>
-                                </div>
-                            </small>
-                        </div>
-                    </div>
-                </div> -->
 
                 <button type="submit" class="btn btn-success btn-block">Submit</button>
             </form>

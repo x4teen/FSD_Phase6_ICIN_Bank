@@ -11,7 +11,7 @@
                         $ {{balance}}
                     </div>
                     <div class="account type">
-                        Saving Account
+                        Savings Balance:
                     </div>
                 </div>
             </div>
@@ -20,8 +20,8 @@
 
             <div class="account-container">
                 <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#depositForm" role="button" aria-expanded="false" aria-controls="depositForm">
-                      Make a Deposit
+                    <a class="btn btn-success" data-toggle="collapse" href="#depositForm" role="button" aria-expanded="false" aria-controls="depositForm">
+                      Deposit Funds
                     </a>
                   </p>
                   <div class="collapse" id="depositForm">
@@ -40,8 +40,8 @@
 
             <div class="account-container">
                 <p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#withdrawalForm" role="button" aria-expanded="false" aria-controls="withdrawalForm">
-                      Take a withdraw
+                    <a class="btn btn-warning" data-toggle="collapse" href="#withdrawalForm" role="button" aria-expanded="false" aria-controls="withdrawalForm">
+                      Withdraw Funds
                     </a>
                 </p>
                 <div class="collapse" id="withdrawalForm">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <ng-container *ngIf="withdrawalFailed">
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-warning" role="alert">
                         {{withdrawalErrorMessage}}
                     </div>
                 </ng-container>
@@ -67,7 +67,7 @@
             <div class="account-container">
                 <p>
                     <a class="btn btn-primary" data-toggle="collapse" href="#transferForm" role="button" aria-expanded="false" aria-controls="transferForm">
-                      Make a Transfer
+                      Transfer Funds
                     </a>
                   </p>
                 <div class="collapse" id="transferForm">

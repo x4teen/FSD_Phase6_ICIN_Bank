@@ -1,5 +1,5 @@
-<div class="alert alert-primary" role="alert">
-    Hello! {{userFirstname}}, Here is your dhashboard.
+<div class="alert alert-success" role="alert">
+    Hello! {{userFirstname}}, Your financial picture is here.
   </div>
 
 <div class="container">
@@ -9,12 +9,12 @@
                 
                 <div class="top-section">
                     <div class="balance float-right">
-                        $ {{checkingAccountBalance}}
+                        Checking Balance: ${{checkingAccountBalance}}
                     </div>
                     <div class="account type">
                         Checking Account
                     </div>
-                    <button type="button" class="btn btn-primary btn-sm" id="viewCheckingAccountDetails" (click)="viewCheckingAccountDetails()">Details</button>
+                    <button type="button" class="btn btn-success btn-sm" id="viewCheckingAccountDetails" (click)="viewCheckingAccountDetails()">Details</button>
                 </div>
 
             </div>
@@ -25,7 +25,7 @@
             
                 <div class="top-section">
                     <div class="balance float-right">
-                        $ {{savingAccountBalance}}
+                       Savings Balance:  ${{savingAccountBalance}}
                     </div>
                     <div class="account type">
                         Saving Account
@@ -39,7 +39,7 @@
 
             <div class="account-container">
                 <div class="alert alert-secondary" role="alert">
-                    Cheque Book Requests
+                    Check Book Requests
                 </div>
                 <table class="table">
                     <thead class="thead-bright">
@@ -61,17 +61,17 @@
             <div class="account-container">
                 <p>
                     <a class="btn btn-primary" data-toggle="collapse" href="#requestChequeForm" role="button" aria-expanded="false" aria-controls="requestChequeForm">
-                      Request New Cheque Book
+                      Request Check Book
                     </a>
                   </p>
                 <div class="collapse" id="requestChequeForm">
                     <div class="card card-body">
                       <form #requestChequeForm="ngForm" (ngSubmit)="requestChequeBook(requestChequeForm.value)" clas="form-inline">
                         <div>
-                            <p class="text-dark">Quantity</p>
+                            <p class="text-dark">Check Order Details:</p>
                          </div>
                          <div class="input-group w-auto justify-content-end align-items-center">
-                            <input type="number" step="1" max="10" min="1" default="1" value="1" id="quantity" name="quantity" class="quantity-field border-0 text-center w-25" ngModel>
+                            Quantity <input type="number" step="1" max="10" min="1" default="1" value="1" id="quantity" name="quantity" class="quantity-field border-1 border-primary text-center w-25" ngModel>
                          </div>
                         <div class="form-group mx-sm-3 mb-2">
                             <div class="form-check form-check-inline">
