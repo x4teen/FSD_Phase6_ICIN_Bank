@@ -1,0 +1,137 @@
+<div class="alert alert-primary" role="alert">
+    Hello! {{userFirstname}}, Here details of your checking account.
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="account-container">     
+                <div class="top-section">
+                    <div class="balance float-right">
+                        $ {{balance}}
+                    </div>
+                    <div class="account type">
+                        Checking Account
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="account-container">
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#depositForm" role="button" aria-expanded="false" aria-controls="depositForm">
+                      Make a Deposit
+                    </a>
+                  </p>
+                  <div class="collapse" id="depositForm">
+                    <div class="card card-body">
+                      <form #depositForm="ngForm" (ngSubmit)="makeDeposit(depositForm.value)" clas="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="number" class="form-control" id="depositAmount" name="depositAmount" placeholder="Deposit Amount" ngModel>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                      </form>
+                    </div>
+                  </div>
+                  <ng-container *ngIf="depositFailed">
+                    <div class="alert alert-danger" role="alert">
+                        {{depositErrorMessage}}
+                    </div>
+                </ng-container>
+            </div>
+
+            <br>
+
+            <div class="account-container">
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#withdrawalForm" role="button" aria-expanded="false" aria-controls="withdrawalForm">
+                      Take a withdraw
+                    </a>
+                </p>
+                <div class="collapse" id="withdrawalForm">
+                    <div class="card card-body">
+                      <form #withdrawalForm="ngForm" (ngSubmit)="makeWithdrawal(withdrawalForm.value)" clas="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="number" class="form-control" id="withdrawalAmount" name="withdrawalAmount" placeholder="Withdrawal Amount" ngModel>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                      </form>
+                    </div>
+                </div>
+                <ng-container *ngIf="withdrawalFailed">
+                    <div class="alert alert-danger" role="alert">
+                        {{withdrawalErrorMessage}}
+                    </div>
+                </ng-container>
+                
+            </div>
+
+            <br>
+
+            <div class="account-container">
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#transferForm" role="button" aria-expanded="false" aria-controls="transferForm">
+                      Make a Transfer
+                    </a>
+                  </p>
+                <div class="collapse" id="transferForm">
+                    <div class="card card-body">
+                      <form #transferForm="ngForm" (ngSubmit)="makeTransfer(transferForm.value)" clas="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="test" class="form-control" id="firstnameTo" name="firstnameTo" placeholder="Receiver's First name" ngModel>
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="test" class="form-control" id="lastnameTo" name="lastnameTo" placeholder="Receiver's Last name" ngModel>
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="number" class="form-control" id="transferAmount" name="transferAmount" placeholder="Transfer Amount" ngModel>
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="accountTo" id="accountTo" value="checking" ngModel>
+                                <label class="form-check-label" for="inlineRadio1">To Checking</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="accountTo" id="accountTo" value="saving" ngModel>
+                                <label class="form-check-label" for="inlineRadio2">To Saving</label>
+                              </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                      </form>
+                    </div>
+                </div>
+                  <ng-container *ngIf="transferFailed">
+                    <div class="alert alert-danger" role="alert">
+                        {{transferErrorMessage}}
+                    </div>
+                    </ng-container>
+            </div>
+
+            <div class="account-container">
+                <div class="alert alert-secondary" role="alert">
+                    Transfer History
+                </div>
+                <table class="table">
+                    <thead class="thead-bright">
+                        <tr>
+                            <th scope="col">From</th>
+                            <th scope="col">From Account</th>
+                            <th scope="col">To</th>
+                            <th scope="col">To Account</th>
+                            <th scop="col">Amount</th>
+                        </tr>
+                    </thead>
+                
+                    <tr *ngFor="let th of transactionHistory; let i = index">
+                        <td>{{th.from}}</td>
+                        <td>{{th.fromAccount}}</td>
+                        <td>{{th.to}}</td>
+                        <td>{{th.toAccount}}</td>
+                        <td>{{th.amount}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>                     
+    </div>
+</div>
