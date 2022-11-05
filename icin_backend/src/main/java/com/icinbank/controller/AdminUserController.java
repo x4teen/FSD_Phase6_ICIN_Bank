@@ -1,11 +1,11 @@
 package com.icinbank.controller;
 
+import com.icinbank.bean.AccessUpdateBody;
+import com.icinbank.bean.AdminUser;
+import com.icinbank.bean.User;
+import com.icinbank.bean.UserPostBody;
 import com.icinbank.exceptionHandling.LoginFailedException;
 import com.icinbank.exceptionHandling.UserNotFoundException;
-import com.icinbank.model.AccessUpdateBody;
-import com.icinbank.model.AdminUser;
-import com.icinbank.model.User;
-import com.icinbank.model.UserPostBody;
 import com.icinbank.repository.AdminUserRepository;
 import com.icinbank.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

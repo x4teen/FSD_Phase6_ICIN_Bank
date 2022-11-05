@@ -1,10 +1,10 @@
 package com.icinbank.controller;
 
+import com.icinbank.bean.User;
+import com.icinbank.bean.UserPostBody;
 import com.icinbank.exceptionHandling.LoginFailedException;
 import com.icinbank.exceptionHandling.UserBlockedException;
 import com.icinbank.exceptionHandling.UserNotFoundException;
-import com.icinbank.model.User;
-import com.icinbank.model.UserPostBody;
 import com.icinbank.repository.AccountRepository;
 import com.icinbank.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

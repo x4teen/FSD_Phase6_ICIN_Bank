@@ -1,6 +1,6 @@
 package com.icinbank.controller;
 
-import com.icinbank.model.*;
+import com.icinbank.bean.*;
 import com.icinbank.repository.ChequeBookRepository;
 import com.icinbank.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,10 @@
 package com.icinbank.repository;
 
-import com.icinbank.model.Transaction;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+
+import com.icinbank.bean.Transaction;
 
 import java.sql.Timestamp;
 import java.util.List;

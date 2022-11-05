@@ -1,8 +1,8 @@
 package com.icinbank.controller;
 
-import com.icinbank.model.Transaction;
-import com.icinbank.model.TransactionHistory;
-import com.icinbank.model.User;
+import com.icinbank.bean.Transaction;
+import com.icinbank.bean.TransactionHistory;
+import com.icinbank.bean.User;
 import com.icinbank.repository.TransactionRepository;
 import com.icinbank.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

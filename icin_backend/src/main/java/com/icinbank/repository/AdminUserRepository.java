@@ -1,9 +1,10 @@
 package com.icinbank.repository;
 
-import com.icinbank.model.AdminUser;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+
+import com.icinbank.bean.AdminUser;
 
 import java.util.List;
 

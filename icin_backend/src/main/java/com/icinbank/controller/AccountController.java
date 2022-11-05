@@ -1,10 +1,10 @@
 package com.icinbank.controller;
 
+import com.icinbank.bean.*;
 import com.icinbank.exceptionHandling.AccessDeniedException;
 import com.icinbank.exceptionHandling.InsufficientFundException;
 import com.icinbank.exceptionHandling.NotRecipientFoundException;
 import com.icinbank.exceptionHandling.UserBlockedException;
-import com.icinbank.model.*;
 import com.icinbank.repository.AccountRepository;
 import com.icinbank.repository.TransactionRepository;
 import com.icinbank.repository.UserRepository;
