@@ -7,10 +7,10 @@ INDEX VERSION 1.131+C:\Projects\FSD_Phase6_ICIN_Bank\.metadata\.plugins\org.ecli
 628762314.index
 3908205445.index
 2538262746.index
-2919497729.index
+2749712975.index
 1431283637.index
 2573721199.index
-2749712975.index
+2919497729.index
 2655980234.index
 3253660414.index
 502030947.index
@@ -31,9 +31,9 @@ INDEX VERSION 1.131+C:\Projects\FSD_Phase6_ICIN_Bank\.metadata\.plugins\org.ecli
 1548363567.index
 2001735918.index
 1375008112.index
-1382671288.index
-2086469757.index
 3088060548.index
+2086469757.index
+1382671288.index
 1827883979.index
 3268198289.index
 2488483278.index
@@ -45,7 +45,6 @@ INDEX VERSION 1.131+C:\Projects\FSD_Phase6_ICIN_Bank\.metadata\.plugins\org.ecli
 1335235162.index
 4274540442.index
 1972438476.index
-3344297025.index
 3160527086.index
 2735714724.index
 599251056.index
