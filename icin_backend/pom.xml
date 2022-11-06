@@ -8,9 +8,9 @@
 		<version>2.7.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.icin</groupId>
-	<artifactId>accounts</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<groupId>com.icin.app</groupId>
+	<artifactId>icin_bank</artifactId>
+	<version>1-0</version>
 	<name>icinbank</name>
 	<description>Capstone Project ICIN Bank</description>
 	<properties>

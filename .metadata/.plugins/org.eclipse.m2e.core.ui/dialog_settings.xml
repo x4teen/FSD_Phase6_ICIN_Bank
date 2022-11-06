@@ -2,8 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="C:\Projects\FSD_Phase6_ICIN_Bank\icin_backend"/>
 			<item value="C:\projects\FSD_Phase6_ICIN_Bank\icin_backend"/>
+			<item value="C:\Projects\FSD_Phase6_ICIN_Bank\icin_backend"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
