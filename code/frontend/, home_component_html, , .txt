@@ -1,0 +1,11 @@
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <main role="main" class="inner cover">
+        <h1 class="cover-heading display-2 text-primary">ICIN Bank</h1>
+        <p class="display-4 text-success">Let’s Bank on Each Other.</p>
+        <p class="lead">
+           <img src="assets/bank-image.jpg" alt=""> 
+        </p>
+        </main>
+    </div>
+</body>

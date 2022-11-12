@@ -1,0 +1,9 @@
+<footer class="footer">
+    <div class="container">
+        <div class="text-center">
+        </div>
+        <div>
+            <h4 class="text-danger text-center display-4">This is a demo project. Not a real banking website</h4>
+        </div>
+    </div>
+</footer>

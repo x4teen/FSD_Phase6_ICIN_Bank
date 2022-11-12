@@ -1,0 +1,132 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+            <div class="account-container">
+                <div class="alert alert-secondary" role="alert">
+                    Pending Cheque Book Requests
+                </div>
+                <table class="table">
+                    <thead class="thead-bright">
+                        <tr>
+                            <th scope="col">Request ID</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Account</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                
+                    <tr *ngFor="let r of chequeRequests;">
+                        <td>{{r.requestId}}</td>
+                        <td>{{r.customerName}}</td>
+                        <td>{{r.account}}</td>
+                        <td>{{r.quantity}}</td>
+                        <td>{{r.status}}</td>
+                    </tr>
+                </table>
+
+                <form #approvalForm="ngForm" (ngSubmit)="approveRequest(approvalForm.value)">
+                    <div class="form-row align-items-center">
+                      <div class="col-auto my-1">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Approve a request</label>
+                        <select class="custom-select mr-sm-2" name=inlineFormCustomSelect id="inlineFormCustomSelect" ngModel>
+                          <option *ngFor="let r of chequeRequests" [value]="r.requestId">
+                            {{r.requestId}}
+                            </option>
+                        </select>
+                      </div>
+                      <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+
+            <div class="account-container">
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#blockForm" role="button" aria-expanded="false" aria-controls="blockForm">
+                      Block/Unblock a User
+                    </a>
+                  </p>
+                <div class="collapse" id="blockForm">
+                    <div class="card card-body">
+                      <form #blockForm="ngForm" (ngSubmit)="updateBlockStatus(blockForm.value)" clas="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="test" class="form-control" id="firstname" name="firstname" placeholder="User's First name" ngModel>
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="test" class="form-control" id="lastname" name="lastname" placeholder="Users's Last name" ngModel>
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="blockStatus" id="blockStatus" value="block" ngModel>
+                                <label class="form-check-label" for="inlineRadio1">Block</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="blockStatus" id="blockStatus" value="unblock" ngModel>
+                                <label class="form-check-label" for="inlineRadio2">Unblock</label>
+                              </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                      </form>
+                    </div>
+                </div>
+                  <ng-container *ngIf="updateBlockStatusFailed">
+                    <div class="alert alert-danger" role="alert">
+                        {{updateBlockStatusErrorMessage}}
+                    </div>
+                    </ng-container>
+            </div>
+
+            <br>
+
+            <div class="account-container">
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#updateAccessForm" role="button" aria-expanded="false" aria-controls="updateAccessForm">
+                      Change User's Access
+                    </a>
+                  </p>
+                <div class="collapse" id="updateAccessForm">
+                    <div class="card card-body">
+                      <form #updateAccessForm="ngForm" (ngSubmit)="updateAccess(updateAccessForm.value)" clas="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="test" class="form-control" id="firstname" name="firstname" placeholder="User's First name" ngModel>
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="test" class="form-control" id="lastname" name="lastname" placeholder="Users's Last name" ngModel>
+                        </div>
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Select access to change</label>
+                            <select class="custom-select mr-sm-2" name=inlineFormCustomSelect id="inlineFormCustomSelect" ngModel>
+                                <option value="deposit">Deposit</option>
+                                <option value="withdrawal">Withdrawal</option>
+                                <option value="transfer">Transfer</option>
+                            </select>
+                          </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="blockStatus" id="blockStatus" value="block" ngModel>
+                                <label class="form-check-label" for="inlineRadio1">Block</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="blockStatus" id="blockStatus" value="unblock" ngModel>
+                                <label class="form-check-label" for="inlineRadio2">Unblock</label>
+                              </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                      </form>
+                    </div>
+                </div>
+                  <ng-container *ngIf="updateAccessFailed">
+                    <div class="alert alert-danger" role="alert">
+                        {{updateAccessErrorMessage}}
+                    </div>
+                    </ng-container>
+            </div>
+
+        </div>                         
+    </div>
+</div>
