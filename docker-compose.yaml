@@ -2,17 +2,19 @@ version: "3"
 
 services:
   backend:
+    image: x4teen/icin_backend
     build:
       context: ./icin_backend
     ports:
       - 8080:8080
 
   frontend:
+    image: x4teen/icin_frontend
     build:
       context: ./icin_frontend
     ports:
       - 80:80
     links:
-      - backend
+      - "backend: icin_backend"
     depends_on:
       - backend
